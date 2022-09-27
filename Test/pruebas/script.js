@@ -1,10 +1,3 @@
-function obtenerImpares(arr) {
-    for (let i = 0; i < arr.length-1; i++) {
-        debugger;
-        if (arr[i] % 2 != 1) {
-            arr.slice[i];
-        debugger;
-        }
-    }
+for (let i = 0; i < 10 ; i++) {
+    console.log(i);
 }
-console.log(obtenerImpares(1, 2,3,4,5));

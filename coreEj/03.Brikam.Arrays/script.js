@@ -91,25 +91,39 @@ let arrayFunciones = [suma(num1, num2), resta(num1, num2), multiplicacion(num1, 
 function ordenarArray2(array) {
     for (let i = 0; i = array.length; i++) {
         // Los últimos i elementos ya estan en posición 
-        for(let j = 0; j < (arr.length - i - 1); j++) {
-        // Comprobando que el item en la iteración actual Checking if the item at present iteration
-        // es mayor que la siguiente iteración
-        if (arr[j] > arr[j + 1]) {
-            // If the condition is true then swap them
-            var temp = arr[j]
-            arr[j] = arr[j + 1]
-            arr[j + 1] = temp
+        for (let j = 0; j < (arr.length - i - 1); j++) {
+            // Comprobando que el item en la iteración actual Checking if the item at present iteration
+            // es mayor que la siguiente iteración
+            if (arr[j] > arr[j + 1]) {
+                // If the condition is true then swap them
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
         }
     }
 }
 //  24.- Crear la función obtenerImpares que acepta como argumento un array de números y devuelva un array con los elementos impares
+
 function obtenerImpares(arr) {
-    for (let i = 0; i < arr.length-1; i++) {
-        if (arr[i] % 2 != 1) {
-            arr.shift[i];
-        }
+    var result = arr.filter((n) => n % 2 == 1)
+    return result;
 }
+//  25.- Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de lo–s números en el array Array: [1, 2, 3] resultado: 6
 
-    //  25.- Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de los números en el array Array: [1, 2, 3] resultado: 6
+function sumarArray(arr) {
+    result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i];
+    }
+    return result;
+}
+//  26.- Crear la función multiplicarArray que acepte como argumento un array numérico y devuelva la multiplicación de los números en el array Array: [2, 3, 4] resultado: 24
 
-    //  26.- Crear la función multiplicarArray que acepte como argumento un array numérico y devuelva la multiplicación de los números en el array Array: [2, 3, 4] resultado: 24
+function multiplicarArray(arr) {
+    result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        result *= arr[i];
+    }
+    return result;
+}
