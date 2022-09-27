@@ -3,10 +3,10 @@
 // Devuelve True si es primo y False si no. 
 function es_primo(num){
     var i=2;
-    while(num%i != 0){
+    while(num%i != 0){ // mientras que el resto de divir el parametro introducido entre la iteración sea distinto de cero, incrementamos uno
         i++;
     }
-    return i==num;
+    return i==num; // Comparamos el num de iteración en el que se ha parado y si este es igual al parametro, es primo )solo divisible por si mismo y por 1).
 }
 
 // alert(es_primo(4));
@@ -31,8 +31,8 @@ function es_simplicable(num,den){
     return !(num!=den && es_primo(num) && es_primo(den)) || (num==1 || den==1); // ESTO HAY QUE CORREGIRLO
 }
 
-alert(es_simplicable(13,29)); //false
-alert(es_simplicable(17,20)); //false
-alert(es_simplicable(15,37)); //false
-alert(es_simplicable(1000,10)); //true
-alert(es_simplicable(5,5)); //true
+// alert(es_simplicable(13,29)); //false
+// alert(es_simplicable(17,20)); //false
+// alert(es_simplicable(15,37)); //false
+// alert(es_simplicable(1000,10)); //true
+// alert(es_simplicable(5,5)); //true

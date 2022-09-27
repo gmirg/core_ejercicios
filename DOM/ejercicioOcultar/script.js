@@ -23,7 +23,7 @@ function muestra() {
  }
  
  //2
- function oculta () {
+ function oculta (  ) {
     var enlace1 = document.getElementById ('enlace1');
     enlace1.style.display='inline';
  
