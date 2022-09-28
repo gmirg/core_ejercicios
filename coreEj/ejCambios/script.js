@@ -27,34 +27,37 @@ function actualizarCaja(caja, pago) {
     }
     return caja
 }
-var caja = inicializarEfectivo(1, 0, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1);
+var caja = inicializarEfectivo(1, 5, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1);
 const billetesMonedas = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
 caja = calcularTotal(caja, billetesMonedas);
 
-alert(caja);
+// alert(caja);
 
 var precio = 500;
-var pago = inicializarEfectivo(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+var pago = inicializarEfectivo(4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 pago = calcularTotal(pago, billetesMonedas);
 
-alert(caja);
 
 //alert(pago);
-// if (pago[pago.length - 1] - precio == 0) {
-//     alert('sin cambio');
-//     caja = actualizarCaja(caja, pago)
-//     alert(caja)
-// } else {
-//     alert(pago[pago.length - 1] - precio);
-//     var devolver = pago[pago.length - 1] - precio
-//     if (devolver > caja[caja.length - 1]) {
-//         alert("No tenemos cambio")
-//     } else {
-//         var devolucion = inicializarEfectivo(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-//         if (caja[0] * billetesMonedas[0] >= devolver) {
-//             devolucion[0] = devolver / (caja[0] * billetesMonedas[0]);
-//             caja[0] -= devolucion[0]
-//         }
-//     }
-
-// }
+if (pago[pago.length - 1] - precio == 0) {
+    alert('Importe exacto');
+    caja = actualizarCaja(caja, pago)
+    alert(caja)
+} else {
+    alert(pago[pago.length - 1] - precio);
+    var devolver = pago[pago.length - 1] - precio
+    if (devolver > caja[caja.length - 1]) {
+        alert("No tenemos cambio")
+    } else {
+        var cambio = inicializarEfectivo(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        if (caja[0] * billetesMonedas[0] >= devolver) {
+            cambio[0] = Math.floor(devolver / billetesMonedas[0]);
+            caja[0] -= cambio[0]
+        } else {
+            cambio[0]= caja[0];
+            caja[0]= 0;
+        }
+        caja = calcularTotal(caja, billetesMonedas);
+        cambio = calcularTotal(cambio, billetesMonedas);
+    }
+}

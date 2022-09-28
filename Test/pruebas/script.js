@@ -1,8 +1,7 @@
-debugger;
-for (let i = 0; i <= 10 ; i++) {
-    if (i === 10) {
-        break;
-    } else {
-    console.log(i);
+function multiplicarArray(arr) {
+    result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        result *= arr[i];
     }
+    return result;
 }
