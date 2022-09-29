@@ -27,16 +27,16 @@ function actualizarCaja(caja, pago) {
     }
     return caja
 }
-var caja = inicializarEfectivo(1, 5, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1);
+var caja = inicializarEfectivo(0, 0, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1);
 const billetesMonedas = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
 caja = calcularTotal(caja, billetesMonedas);
 
 alert(caja);
 
-var precio = 500;
-var pago = inicializarEfectivo(4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+var precio = 5;
+var pago = inicializarEfectivo(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 pago = calcularTotal(pago, billetesMonedas);
-
+ingreso
 
 //alert(pago);
 if (pago[pago.length - 1] - precio == 0) {

@@ -96,15 +96,23 @@ function pintarArray(arr) {
 
 //  14.- Crear la función eliminarDuplicados que acepte como argumento un array y devuelva un array en el que se hayan eliminado los duplicados
 function eliminarDuplicados(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < (arr.length - i - 1); j++) {
-            if (arr[j] != arr[j + 1]) {
-                var result = arr.filter((j);
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[i + 1]) {
+                let aux = arr[j];
+                arr[j] = arr[i + 1];
+                arr[i + 1] = aux;
             }
         }
-    }       
+    }
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j] == arr[j+1]) {
+                arr.splice(j,1);
+            }
+        }
     return arr;
-
+    }
 }
 
 // Iteraciones 🏰 proyecto 🏰
@@ -193,7 +201,7 @@ function sumarArray(arr) {
 
 function multiplicarArray(arr) {
     result = 0;
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         result *= arr[i];
     }
     return result;
