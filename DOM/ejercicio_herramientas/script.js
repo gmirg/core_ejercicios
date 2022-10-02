@@ -1,21 +1,22 @@
-// let enlaces = document.getElementsByTagName("a");
-// function calc_enlaces() {
-//     alert("Tiene " + enlaces.length + " enlaces");
-// }
+let enlaces = document.querySelectorAll("a");
+function calc_enlaces() {
+    alert("Tiene " + enlaces.length + " enlaces");
+}
 function dir_penultimo_enlace() {
-    alert ("El penultimo enlace te dirige a " + enlaces[enlaces.length -2].href); 
+    alert("El penultimo enlace te dirige a " + enlaces[enlaces.length - 2].href);
 }
 function tercera() {
-var counter= 0;
-for(let i=0; i<links.length; i++){
-    if (links[i].href == "http://prueba/"){
-        number_of_links_to++;
+    var counter = 0;
+    for (let i = 0; i < enlaces.length; i++) {
+        if (enlaces[i].href == "http://prueba/") {
+            counter++;
+        }
     }
-}
-console.log("Numero de enlaces que enlazan a http://prueba/: "+ number_of_links_to);
+    return alert("Numero de enlaces que enlazan a http://prueba: es: " + counter);
 }
 function link3o() {
-    let parrafo = document.getElementsByTagName("p");
-    let e_parrafo = parrafo[2].getElementsByTagName("a");
-    alert("El tercer parrafo tiene "+ e_parrafo.length);
+    let parrafo = document.querySelectorAll("p");
+    let e_parrafo = parrafo[2].querySelectorAll("a");
+    alert("El tercer parrafo tiene " + e_parrafo.length + " enlaces");
 }
+
