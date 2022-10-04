@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    font-family: "Poppins";
+}
+h1 {
+    margin-top: 0;
+}
+body {
+    background-image: url(https://www.revolut.com/_next/image/?url=https%3A%2F%2Fassets.revolut.com%2Fwebsite%2Fassets%2Fretail%2Fhome-V4%2FHero.jpg%3Fauthuser%3D0&w=3840&q=90);
+    background-size: cover;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#favicon {
+    width: 50px;
+    height: 50px;
+}
+
+header {
+    background-color:aliceblue;
+    height: 110px;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top:0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+img {
+    height: 120px;
+    margin-top: 0px;
+}
+
+li {
+    float: left;
+    list-style: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li:hover {
+    color:rgb(109, 109, 151)
+}
+
+nav {
+    float: right;
+    color:#222;     
+    z-index: 100;
+}
+
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2% 3%;
+    border-radius: 24px;
+    box-shadow: black 0px 6px 16px -6px;
+    width: 40%;
+    margin: 2% auto;
+}
+
+.form input {
+    width: 100%;
+    height: 45px;
+    margin: 06px;
+    border: 1px black solid;
+    border-radius: 9px;
+    padding: 0 1%;
+  }
+
+.form button {
+    width: 250px;
+    padding: 10px;
+    margin-top: 5px;
+    background: aliceblue;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    border-radius: 9px;
+    border: none;
+    box-shadow: 5px 4px 8px -6px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 5px 4px 8px -6px rgba(0,0,0,0.48);
+    -moz-box-shadow: 5px 4px 8px -6px rgba(0,0,0,0.48); 
+}
+.form button:active {
+    box-shadow: 5px 4px 8px -39px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 5px 4px 8px -39px rgba(0,0,0,0.48);
+    -moz-box-shadow: 5px 4px 8px -39px rgba(0,0,0,0.48);
+    transform: translateY(2px);
+}
+.form button:hover {
+    background-color:rgb(109, 109, 151)
+}
+
+footer p {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    padding: 0 1%;
+}
