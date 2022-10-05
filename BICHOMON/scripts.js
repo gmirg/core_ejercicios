@@ -17,7 +17,11 @@ console.log(document.baseURI);
 // Imprime por consola el dominio de la página.
 console.log(document.domain);	
 // Imprime todos los nodos de imagen.
-// let nodes = document.querySelectorAll = (".img-fixed.img-sprite"); 
-let nodes = document.getElementsByTagName("img")
-console.log(nodes);
+let img_nodes = document.querySelectorAll = (".img-fixed.img-sprite"); 
+// let nodes = document.getElementsByTagName("img")
+console.log(img_nodes);
 // Sustituye el atributo "src" de todas las imágenes por este "https://media.giphy.com/media/2v170e71aanfi/giphy.gif"
+function changeImage() {
+    img_nodes.src= "https://media.giphy.com/media/2v170e71aanfi/giphy.gif";
+}
+changeImage();
