@@ -5,20 +5,18 @@
 //      · Mensaje
 // Guardar en Local Storage los datos de contacto enviados de cada usuario
 function enviar() {
-    let user =  {
-        nombre: document.getElementById("name").value,
+    let user =  [
+        {nombre: document.getElementById("name").value,
         mail: document.getElementById("email").value,
         message: document.getElementById("message").value
-    }
-    let storage = localStorage.getItem('users');
-    console.log('El valor que esta en el almacen locas es ' + typeof storage);
+    }];
+    let storage = JSON.parse(localStorage.getItem('users'));
+    console.log('El valor que esta en el almacen local es ' + typeof storage);
     if (storage == null) {
         localStorage.setItem('users', JSON.stringify(user));
     } else {
-        let existingUsers = JSON.parse(storage);
-        console.log('parseado es ' + typeof existingUsers);
-        existingUsers.assign(user); 
-        localStorage.setItem('users', JSON.stringify(existingUsers));
+        let subir = storage.assign({user}); 
+        localStorage.setItem('users', JSON.stringify(subir));
     }
 }
 
