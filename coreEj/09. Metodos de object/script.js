@@ -13,7 +13,7 @@ function enviar() {
     let storage = JSON.parse(localStorage.getItem('users'));
     console.log('El valor que esta en el almacen local es ' + typeof storage);
     if (storage == null) {
-        localStorage.setItem('users', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(DOMStringList));
     } else {
         let subir = storage.assign({user}); 
         localStorage.setItem('users', JSON.stringify(subir));
