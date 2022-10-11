@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container #main {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+figcaption {
+    text-align: center;
+    padding: 1%;
+}
+a.my-button {
+    background: linear-gradient(to right, #196BCA, #6433E0);
+    background-color: #196BCA;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+}
+a.my-button:hover {
+    background: linear-gradient(to right, #5482d0, #7d5ee3);
+    background-color: #5482d0;
+}
+
+a.my-button:active {
+    transform: scale(0.95);
+}
+
+.dog-collection {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.stamp {
+    border: 4px solid black;
+    height: 300px;
+    width: 300px;
+}
+.full img {
+    border: 4px solid black;
+    width: 300px;
+    height: 300px;
+}
