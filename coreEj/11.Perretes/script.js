@@ -24,17 +24,16 @@ function alreadyDogs() {
     return check;
 }
 function catchDog() {
+    if (alreadyDogs() == true()
     let images = document.querySelectorAll("div.full > img");
-    
-    
-        let box = document.querySelector(".stamp");
-        let setImage = document.createElement("img")
-        setImage.setAttribute("src", dog)
-        box.appendChild(setImage);
-        box.setAttribute("class", "full");
-    } else {
-        images.forEach(element => {
-            console.log(images[element].currentSrc);
-        });
-    }
+    let box = document.querySelector(".stamp");
+    let setImage = document.createElement("img")
+    setImage.setAttribute("src", dog)
+    box.appendChild(setImage);
+    box.setAttribute("class", "full");
+} else {
+    images.forEach(element => {
+        console.log(images[element].currentSrc);
+    });
+}
 }

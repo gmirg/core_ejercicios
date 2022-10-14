@@ -10,4 +10,4 @@
 //     (n < 2) ? resultado = 1 : resultado = fibonacci(n - 1) + fibonacci(n - 2);
 //     return resultado;
 // };
-const fibonacci = n => (n < 2) ? resultado = 1 : resultado = fibonacci(n - 1) + fibonacci(n - 2);
+const fibonacci = n => (n < 2) ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
